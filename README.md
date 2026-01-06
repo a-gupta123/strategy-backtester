@@ -27,13 +27,12 @@ Let:
 
 The trading signal is defined as:
 
-$$
-Signal_t = 1 if MA_{fast}(t) > MA_{slow}(t), else 0
-$$
+
+$Signal_t$ = 1 if $MA_{fast}(t) > MA_{slow}(t)$, else 0
 
 To avoid look-ahead bias, positions are applied with a one-day lag:
 
-Position_{t+1} = Signal_t
+$Position_{t+1} = Signal_t$
 
 The strategy is either fully invested (long SPY) or fully out of the market.
 
