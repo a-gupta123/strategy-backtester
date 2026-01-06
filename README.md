@@ -22,8 +22,8 @@ This project is less about finding a profitable strategy and more about implemen
 
 Let:
 - $P_t$ be the adjusted closing price of SPY on day t
-- $MA_fast(t)$ be the fast moving average
-- $MA_slow(t)$ be the slow moving average
+- $MA_{fast}(t)$ be the fast moving average
+- $MA_{slow}(t)$ be the slow moving average
 
 The trading signal is defined as:
 
