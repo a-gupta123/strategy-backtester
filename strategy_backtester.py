@@ -145,6 +145,7 @@ def plot_results(results):
     plt.ylabel("Growth of $1")
     plt.legend()
     plt.tight_layout()
+    plt.savefig("equity_curve.png", dpi=200, bbox_inches="tight")
     plt.show()
 
     plt.figure()
@@ -153,6 +154,7 @@ def plot_results(results):
     plt.xlabel("Date")
     plt.ylabel("Drawdown")
     plt.tight_layout()
+    plt.savefig("drawdown_curve.png", dpi=200, bbox_inches="tight")
     plt.show()
 
     plt.figure()
@@ -161,6 +163,7 @@ def plot_results(results):
     plt.xlabel("Date")
     plt.ylabel("Rolling Sharpe")
     plt.tight_layout()
+    plt.savefig("rolling_sharpe.png", dpi=200, bbox_inches="tight")
     plt.show()
 
 def print_metrics(m):
