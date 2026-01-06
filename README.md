@@ -26,9 +26,9 @@ Let:
 - $MA_{slow}(t)$ be the slow moving average
 
 The trading signal is defined as:
-
-Signal_t = 1 if MA_fast(t) > MA_slow(t), else 0
-
+$$
+Signal_t = 1 if MA_{fast}(t) > MA_{slow}(t), else 0
+$$
 To avoid look-ahead bias, positions are applied with a one-day lag:
 
 Position_{t+1} = Signal_t
