@@ -31,7 +31,7 @@ $Signal_t$ = 1 if $MA_{fast}(t) > MA_{slow}(t)$, else 0
 
 To avoid look-ahead bias, positions are applied with a one-day lag:
 
-$Position_{ t+1} = Signal_{ t}$
+$Position_{t+1} = Signal_{t}$
 
 This strategy is either fully invested (long SPY) or fully out of the market.
 
@@ -43,19 +43,19 @@ This strategy is either fully invested (long SPY) or fully out of the market.
 
 Daily strategy returns are computed as:
 
-Strategy return = Position_t × Asset return − Transaction cost
+Strategy return = $Position_t$ × Asset return − Transaction cost
 
 where asset returns are the daily percentage returns of SPY.
 
 ### Transaction Costs
 
-Transaction costs are modeled as proportional to daily turnover:
+Transaction costs depend on daily turnover and are applied whenever the position changes.
 
-Cost_t = Turnover_t × Cost rate
+$Cost_t$ = $Turnover_t$ × Cost rate
 
-Turnover is defined as the absolute change in position:
+Turnover is the absolute change in position from one day to the next.
 
-Turnover_t = |Position_t − Position_{t−1}|
+$Turnover_t = |Position_t − Position_{t−1}|$
 
 Costs are specified in basis points per trade.
 
