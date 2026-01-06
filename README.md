@@ -79,16 +79,21 @@ Metrics are computed for both:
 
 ## Visualizations
 
+The figures below show a representative run of the strategy on historical SPY data.
+
 The following plots are produced:
 
 1. Equity curve  
    Strategy vs buy-and-hold performance over time
+   ![Equity Curve](equity_curve.png)
 
-2. Drawdown curve  
+3. Drawdown curve  
    Peak-to-trough losses of the strategy
+   ![Drawdown Curve](drawdown_curve.png)
 
-3. Rolling Sharpe ratio  
+5. Rolling Sharpe ratio  
    Rolling risk-adjusted performance over a fixed window
+   ![Rolling Sharpe ratio](rolling_sharpe.png)
 
 These plots make it easier to see when the strategy performs well, when it struggles, and how volatile its performance is over time.
 
