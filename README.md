@@ -1,29 +1,29 @@
 # Moving Average Crossover Strategy Backtester
 
-This project implements a simple backtesting framework for a moving average crossover trading strategy on SPY.
-The strategy is evaluated against a buy-and-hold benchmark using standard performance metrics, including CAGR, volatility, Sharpe ratio, and maximum drawdown.
+This project implements a backtest of a moving average crossover trading strategy on SPY.
+Results are compared to a simple buy-and-hold SPY baseline using standard performance metrics such as CAGR, volatility, Sharpe ratio, and maximum drawdown.
 
 ---
 
 ## Overview
 
-Systematic trading strategies are often evaluated using historical backtests to understand their risk–return profile and failure modes.
-Moving average crossover strategies are a common baseline in quantitative finance, as they encode simple trend-following behavior while remaining easy to interpret.
+Moving average crossover strategies are a simple and commonly used baseline in quantitative trading.
+Because they are easy to interpret, they are useful for testing whether a backtest is behaving as expected across different market regimes.
 
-This project focuses less on strategy discovery and more on building a clean, correct backtesting pipeline, including:
-- Proper signal timing and execution lag
-- Turnover-based transaction costs
-- Risk-adjusted performance metrics
-- Drawdown and rolling Sharpe analysis
+This project is less about finding a profitable strategy and more about implementing the mechanics of a backtest correctly, including:
+- Applying signals with a one-day execution lag
+- Accounting for transaction costs through daily turnover
+- Computing basic risk and return statistics
+- Visualizing drawdowns and rolling Sharpe ratios
 
 ---
 
 ## Strategy Description
 
 Let:
-- P_t be the adjusted closing price of SPY on day t
-- MA_fast(t) be the fast moving average
-- MA_slow(t) be the slow moving average
+- $P_t$ be the adjusted closing price of SPY on day t
+- $MA_fast(t)$ be the fast moving average
+- $MA_slow(t)$ be the slow moving average
 
 The trading signal is defined as:
 
